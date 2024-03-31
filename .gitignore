@@ -1,2 +1,5 @@
 /01-docker-terraform/docker_sql/ny_taxi_postgres_data/
-
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
