@@ -1,15 +1,15 @@
 terraform {
   required_providers {
     google = {
-      source = "hashicorp/google"
+      source  = "hashicorp/google"
       version = "5.22.0"
     }
   }
 }
 
 provider "google" {
-  project     = "terraform-demo-418822"
-  region      = "us-central1"
+  project = "terraform-demo-418822"
+  region  = "us-central1"
 }
 
 resource "google_storage_bucket" "demo-bucket" {
@@ -34,4 +34,8 @@ resource "google_storage_bucket" "demo-bucket" {
       type = "AbortIncompleteMultipartUpload"
     }
   }
+}
+
+resource "google_bigquery_dataset" "demo-dataset" {
+  dataset_id = "demo-dataset"
 }
